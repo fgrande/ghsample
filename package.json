@@ -7,10 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "start": "node dist/server.js",
     "build": "tsc",
-    "preinstall": "git config --local core.hooksPath src/hdgithooks/bridge && chmod +x src/hdgithooks/bridge/*",
+    "prepare": "git config --local core.hooksPath src/hdgithooks/bridge && chmod +x src/hdgithooks/bridge/*",
     "hooks:pre-commit": "node ./src/husky/hooks/pre-commit.js",
-    "hooks:pre-push": "node ./src/husky/hooks/pre-push.js",
-    "prepare": "husky"
+    "hooks:pre-push": "node ./src/husky/hooks/pre-push.js"
   },
   "author": "",
   "license": "ISC",
