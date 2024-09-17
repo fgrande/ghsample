@@ -1,0 +1,26 @@
+{
+  "name": "huskysample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "preinstall": "git config --local core.hooksPath src/hdgithooks/bridge && chmod +x src/hdgithooks/bridge/*",
+    "hooks:pre-commit": "node ./src/husky/hooks/pre-commit.js",
+    "hooks:pre-push": "node ./src/husky/hooks/pre-push.js",
+    "prepare": "husky"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.5",
+    "shelljs": "^0.8.5",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

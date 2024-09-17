@@ -1,0 +1,1 @@
+npm run --if-present "hooks:pre-commit"
